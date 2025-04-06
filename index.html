@@ -8,8 +8,50 @@
     <link rel="stylesheet" href="./src/output.css">
 </head>
 
-<body>
-    <h1>United Children Africa</h1>
+<body class="">
+    <nav class="bg-stone-700 py-4 md:py-6 sm:py-4">
+        <div class="container mx-auto flex justify-between items-center ">
+            <div class="text-xl font-bold text-white">United Children Africa</div>
+            <div class="hidden md:flex space-x-4">
+                <a href="#" class="text-gray-300 hover:text-uca">Über uns</a>
+                <a href="#" class="text-gray-300 hover:text-uca">Kinder</a>
+                <a href="#" class="text-gray-300 hover:text-uca">Spenden</a>
+                <a href="#" class="text-gray-300 hover:text-uca">Kontakt</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-300 hover:text-uca focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <svg class="h-6 w-6 fill-current text-white" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-stone-800">
+                <a href="#"
+                    class="block px-3 py-2 text-base font-medium text-gray-300 hover:bg-stone-700 hover:text-uca">Über
+                    uns</a>
+                <a href="#"
+                    class="block px-3 py-2 text-base font-medium text-gray-300 hover:bg-stone-700 hover:text-uca">Kinder</a>
+                <a href="#"
+                    class="block px-3 py-2 text-base font-medium text-gray-300 hover:bg-stone-700 hover:text-uca">Spenden</a>
+                <a href="#"
+                    class="block px-3 py-2 text-base font-medium text-gray-300 hover:bg-stone-700 hover:text-uca">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const mobileMenuButton = document.querySelector('nav button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
 
 </html>
